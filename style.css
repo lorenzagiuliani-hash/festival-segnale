@@ -7,8 +7,8 @@
   --colore-primario-scuro: #173f32;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #202923;
-  --font-testo: Arial, Helvetica, sans-serif;
-  --font-titoli: Georgia, "Times New Roman", serif;
+--font-testo: Helvetica, Arial, sans-serif;
+--font-titoli: "Gabriella", Georgia, serif;
 }
 
 * {
@@ -93,8 +93,10 @@ h1,
 h2,
 h3 {
   font-family: var(--font-titoli);
+  font-weight: 900;
   line-height: 1.2;
 }
+
 
 h1 {
   max-width: 18ch;
@@ -159,7 +161,7 @@ h3 {
 .event-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 @media (min-width: 600px) {
@@ -168,9 +170,13 @@ h3 {
   }
 }
 
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 
 .event-card {
-  margin-bottom: 1.5rem;
   overflow: hidden;
   border: 1px solid #b7c0b7;
   border-radius: 0.75rem;
